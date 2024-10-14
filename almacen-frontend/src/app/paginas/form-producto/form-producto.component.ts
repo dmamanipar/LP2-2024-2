@@ -97,6 +97,7 @@ export class FormProductoComponent implements OnInit {
 
 
   saveProduct() {
+    console.log(this.productoSeleccionado);
     if(this.productoSeleccionado!==null){
       const productoActualizado: Producto = {
         ...this.productoSeleccionado,
@@ -141,7 +142,9 @@ export class FormProductoComponent implements OnInit {
       }
     }
   }
+
   resetButton(){
+    this.productoSeleccionado = null;
     this.formInial(this.fbr);
   }
 }
